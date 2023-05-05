@@ -2,11 +2,21 @@
   <h1>Top 100 movies of all time</h1>
 </header>
 <main>
-  <app-home-movies
-    class="home_movie"
-    *ngFor="let movie of moviesList"
-    [movieData]="movie"
-  ></app-home-movies>
+  <div class="inputContainer">
+    <input
+      placeholder="See if your interested movie is in the top 100"
+      type="text"
+      (ngModelChange)="onChange($event)"
+      [(ngModel)]="inputValue"
+    />
+  </div>
+  <div class="main_movies_container">
+    <app-home-movies
+      class="home_movie"
+      *ngFor="let movie of moviesList"
+      [movieData]="movie"
+    ></app-home-movies>
+  </div>
 </main>
 <footer>
   <div class="footer_text_container">

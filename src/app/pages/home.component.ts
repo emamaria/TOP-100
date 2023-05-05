@@ -8,26 +8,44 @@ import { HomeMovie } from '../interfaces/home-movies.interface';
 })
 export class HomeComponent implements OnInit {
 
+  inputValue: string = "";
   moviesList: HomeMovie[] = [
-    {title: "shawshank redemption", img: "", rank:1}, 
-    {title: "godfather", img: "", rank:2},
-    {title: "taxi driver", img: "", rank:3},
-    {title: "shawshank redemption", img: "", rank:1}, 
-    {title: "godfather", img: "", rank:2},
-    {title: "taxi driver", img: "", rank:3},
-    {title: "shawshank redemption", img: "", rank:1}, 
-    {title: "godfather", img: "", rank:2},
-    {title: "taxi driver", img: "", rank:3},
-    {title: "shawshank redemption", img: "", rank:1}, 
+    
    
   ]
 
-  constructor() { }
+  moviesListOriginal: HomeMovie[] = [
+    {title: "shawshank redemption", img: "", rank:1}, 
+    {title: "godfather", img: "", rank:2},
+    {title: "taxi driver", img: "", rank:3},
+    {title: "shawshank redemption", img: "", rank:1}, 
+    {title: "godfather", img: "", rank:2},
+    {title: "taxi driver", img: "", rank:3},
+    {title: "shawshank redemption", img: "", rank:1}, 
+    {title: "godfather", img: "", rank:2},
+    {title: "taxi driver", img: "", rank:3},
+    {title: "shaws", img: "", rank:1}, 
+   
+  ]
 
-  ngOnInit(): void {
+
+
+  constructor() { 
+    this.moviesList = this.moviesListOriginal
   }
 
+  ngOnInit(): void {
+   
+  }
 
+  onChange(value:string):any{
+    console.log("valor", value);
+
+    this.moviesList = this.moviesListOriginal
+  
+    this.moviesList = this.moviesList.filter( list =>  list.title.toLowerCase().includes(value.toLowerCase())) 
+   
+  }
   
 
 }
