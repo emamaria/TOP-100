@@ -1,8 +1,12 @@
 <header>
   <h1>Top 100 movies of all time</h1>
 </header>
-<main *ngFor="let movie of moviesList">
-  <app-home-movies [movieData]="movie"></app-home-movies>
+<main>
+  <app-home-movies
+    class="home_movie"
+    *ngFor="let movie of moviesList"
+    [movieData]="movie"
+  ></app-home-movies>
 </main>
 <footer>
   <div class="footer_text_container">

@@ -8,7 +8,11 @@ import { HomeMovie } from '../interfaces/home-movies.interface';
 })
 export class HomeComponent implements OnInit {
 
-  moviesList: HomeMovie[] = [{title: "shawshank redemption", img: "img1", rank:1}, {title: "godfather", img: "img2", rank:2}]
+  moviesList: HomeMovie[] = [
+    {title: "shawshank redemption", img: "img1", rank:1}, 
+    {title: "godfather", img: "img2", rank:2},
+    {title: "taxi driver", img: "img3", rank:3}
+  ]
 
   constructor() { }
 

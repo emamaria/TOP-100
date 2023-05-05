@@ -3,6 +3,10 @@ header{
     background-color: gray;
 }
 
+.home_movie{
+    margin: 10px;
+}
+
 main{
     display: flex;
     flex-direction: row;
