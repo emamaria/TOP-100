@@ -1,4 +1,4 @@
-<article (click)="goToMovieDetailPage()">
+<article [routerLink]="['/movie', getMovieData.title]">
   <header>
     <div class="movie_rank_container">{{ getMovieData.rank }}</div>
   </header>
