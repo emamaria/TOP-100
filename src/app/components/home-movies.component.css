@@ -1,0 +1,30 @@
+
+article{
+    background-color: aquamarine;
+    display: flex;
+   flex-direction: column;
+   width: 250px;
+   height: 400px;
+   
+}
+
+header{
+    display: flex;
+    background-color: red;
+    height: 50px;
+}
+
+.movie_rank_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    width: 50px;
+  
+
+}
+
+h3{
+    background-color: teal;
+    text-align: center;
+}

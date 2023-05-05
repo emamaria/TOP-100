@@ -1,7 +1,9 @@
 <header>
   <h1>Top 100 movies of all time</h1>
 </header>
-<main></main>
+<main *ngFor="let movie of moviesList">
+  <app-home-movies [movieData]="movie"></app-home-movies>
+</main>
 <footer>
   <div class="footer_text_container">
     <small class="copy">&#169; 2023 all rights reserved</small>

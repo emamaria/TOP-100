@@ -5,8 +5,13 @@ header{
 
 main{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     min-height: 100vh;
+    background-color: blueviolet;
 }
 
 footer{
