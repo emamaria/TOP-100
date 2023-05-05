@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home.component';
 import { OneMovieComponent } from './pages/one-movie.component';
 import { MovieDetailComponent } from './components/movie-detail.component';
 import { HomeMoviesComponent } from './components/home-movies.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeMoviesComponent } from './components/home-movies.component';
     HomeMoviesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

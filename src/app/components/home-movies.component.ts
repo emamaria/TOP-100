@@ -24,4 +24,9 @@ export class HomeMoviesComponent implements OnInit {
     return this.movieData
   }
 
+
+  goToMovieDetailPage(){
+    console.log("ir a detalle pagina");
+  }
+
 }
