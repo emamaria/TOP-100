@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MoviesService {
 
-  constructor() { }
+  constructor() { 
+    console.log("cargando servicios");
+  }
 }

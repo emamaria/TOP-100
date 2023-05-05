@@ -11,6 +11,7 @@ export class AppComponent {
 
   constructor(){
   //  console.log(process);
+  console.log("cargando app");
   }
   
 }

@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
 
   constructor() { 
     this.moviesList = this.moviesListOriginal
+    console.log("cargando home");
   }
 
   ngOnInit(): void {
