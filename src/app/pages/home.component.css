@@ -32,6 +32,10 @@ main{
     
 }
 
+h4{
+    color:aqua
+}
+
 .main_movies_container{
    
     display: flex;

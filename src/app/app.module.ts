@@ -7,7 +7,7 @@ import { OneMovieComponent } from './pages/one-movie.component';
 import { MovieDetailComponent } from './components/movie-detail.component';
 import { HomeMoviesComponent } from './components/home-movies.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { HttpClientModule} from "@angular/common/http"
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
