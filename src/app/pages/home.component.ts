@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
 
  
   moviesListOriginal: HomeMovie[] = [
-    
     {title: "shawshank redemption", img: "", rank:1}, 
     {title: "godfather", img: "", rank:2},
     {title: "taxi driver", img: "", rank:3},
@@ -31,19 +30,20 @@ export class HomeComponent implements OnInit {
     {title: "godfather", img: "", rank:2},
     {title: "taxi driver", img: "", rank:3},
     {title: "shaws", img: "", rank:1}, 
+
+    
   ]
 
-
+  
 
 
   constructor(private movieService:MoviesService) {
-    this.movieService.probando()
-    
+  
   }
 
   ngOnInit(): void {
-    
     this.moviesList = this.moviesListOriginal
+    
     
     console.log("cargando home");
   }
@@ -57,15 +57,14 @@ export class HomeComponent implements OnInit {
    
   }
 
-   get moviesData(){
-     //mapeo ditrectamente el resltado de this.movieService.requestMovies()
-     //y lo almaceno en this.moviesListOriginal
-    // this.moviesListOriginal = this.movieService.requestMovies()
-    this.movie = this.movieService.requestMovies()
-    console.log("home movie data", this.movie);
-
-    return this.movie
-  }
+  // get filmsList(){
+    
+  //    this.moviesList = [...this.movieService.homeMovies()]
+  //    this.moviesListOriginal = [...this.movieService.homeMovies()]
+  //    console.log("ejecuto filmsList");
+  //    return this.moviesList
+  // }
+   
 
 
 }

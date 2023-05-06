@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MoviesService } from '../movies.service';
+import { AllMoviesList } from '../interfaces/all-movies.interface';
 @Component({
   selector: 'app-one-movie',
   templateUrl: './one-movie.component.html',
@@ -7,7 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class OneMovieComponent implements OnInit {
 
-  constructor(private activateRoute: ActivatedRoute) { }
+  filmName:string = "";
+
+  constructor(private activateRoute: ActivatedRoute, private moviesService: MoviesService) { }
 
   ngOnInit(): void {
 
@@ -15,8 +19,15 @@ export class OneMovieComponent implements OnInit {
 
       const {movieName}  = params;
 
+      this.filmName = movieName
       console.log(movieName);
     })
+  }
+
+
+  get movie(){
+    //filtro la pelicula de array por nombre de la ruta
+   return this.moviesService.moviesList.filter((movie: AllMoviesList) => movie.title === this.filmName)[0]
   }
 
 }

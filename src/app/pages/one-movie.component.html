@@ -1,1 +1,15 @@
-<p>one-movie works!</p>
+<p>{{ movie.rank }}</p>
+<p>{{ movie.title }}</p>
+<p>{{ movie.rating }}</p>
+<p>{{ movie.year }}</p>
+<p>{{ movie.description }}</p>
+<ul>
+  <li *ngFor="let genre of movie.genre"></li>
+</ul>
+<ul>
+  <li *ngFor="let director of movie.director"></li>
+</ul>
+<ul>
+  <li *ngFor="let writer of movie.writers"></li>
+</ul>
+<img [src]="movie.image" [alt]="movie.title" />
