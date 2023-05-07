@@ -11,7 +11,7 @@
       [(ngModel)]="inputValue"
     />
   </div>
-  <div class="main_movies_container">
+  <div class="main_movies_container" *ngIf="loadingStatus">
     <app-home-movies
       class="home_movie"
       *ngFor="let movie of moviesList"

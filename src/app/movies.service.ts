@@ -8,6 +8,8 @@ import { AllMoviesList } from './interfaces/all-movies.interface';
 export class MoviesService {
 
    allMovies: AllMoviesList[] = [];
+   
+  loadedData: boolean = false;
   
 
   constructor(private http: HttpClient) { 
@@ -20,6 +22,7 @@ export class MoviesService {
     //   console.log("done request", resp);
     //    this.allMovies = resp
     //   console.log("primera carga", this.allMovies);
+
     // })
 
    
@@ -27,15 +30,21 @@ export class MoviesService {
     
   }
 
+  
+
   get moviesList(){
     return [...this.allMovies]
   }
 
   homeMovies(): HomeMovie[]{
     console.log("ejecuto homeMovies");
+    this.loadedData = true;
+    console.log("loaded status", this.loadedData);
+ 
     return [...this.allMovies].map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )
   }
 
+  
   // requestMovies(): any{
 
   //   if(this.allMovies.length > 0){

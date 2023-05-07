@@ -35,9 +35,7 @@ export class HomeComponent implements OnInit {
   //   {title: "taxi driver", img: "", rank:3},
   //   {title: "shaws", img: "", rank:1}, 
   filmsList(){
-    console.log("cargando peliculas");
-    this.moviesListOriginal = [...this.movieService.homeMovies()]
-     this.moviesList = [...this.movieService.homeMovies()]
+   
     
     //  console.log("ejecuto filmsList");
     //  return this.moviesList
@@ -45,7 +43,7 @@ export class HomeComponent implements OnInit {
 
 
   get Date(){
-    this.filmsList()
+    // this.filmsList()
      return new Date().getFullYear()
   }
     
@@ -81,7 +79,12 @@ export class HomeComponent implements OnInit {
   }
 
  
-   
+   get loadingStatus(){
+    console.log("cargando peliculas");
+     this.moviesListOriginal = [...this.movieService.homeMovies()]
+     this.moviesList = [...this.movieService.homeMovies()]
+     return this.movieService.loadedData
+   }
 
 
 }
