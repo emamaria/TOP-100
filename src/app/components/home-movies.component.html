@@ -3,5 +3,9 @@
     <div class="movie_rank_container">{{ getMovieData.rank }}</div>
     <h3>{{ getMovieData.title }}</h3>
   </header>
-  <img [src]="getMovieData.img" [alt]="getMovieData.title" />
+  <img
+    [src]="getMovieData.img"
+    [alt]="getMovieData.title"
+    onerror="this.onerror=null; this.src='../../assets/noimage.png'"
+  />
 </article>
