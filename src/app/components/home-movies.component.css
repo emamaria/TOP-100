@@ -11,7 +11,7 @@ header{
     display: flex;
     background-color: red;
    height: 100px;
-   border-bottom: 4px solid #F5C518;;
+   border-bottom: 4px solid #F5C518;
 } 
 
 .movie_rank_container{
@@ -20,7 +20,7 @@ header{
     align-items: center;
     background-color:#F5C518;
     width: 50px;
-  
+   font-size: 2rem;
 
 }
 
@@ -30,9 +30,10 @@ header{
 h3{
     display: flex;
     align-items: center;
-    background-color: teal;
+    background-color: black;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     text-align: center;
+    color: #F5C518;
 }
