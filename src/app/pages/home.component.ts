@@ -9,8 +9,8 @@ import { MoviesService } from '../movies.service';
 })
 export class HomeComponent  {
   
-
-
+//tipo parametro del pipe
+  filterFilm = "";
 
   constructor(private movieService:MoviesService) {
   

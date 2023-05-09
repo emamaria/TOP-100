@@ -7,6 +7,8 @@ import { AllMoviesList } from './interfaces/all-movies.interface';
 })
 export class MoviesService {
 
+ 
+
    allMovies: AllMoviesList[] = [];
 
    homeMovies:HomeMovie[] = [];

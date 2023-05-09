@@ -7,14 +7,16 @@ import { OneMovieComponent } from './pages/one-movie.component';
 import { MovieDetailComponent } from './components/movie-detail.component';
 import { HomeMoviesComponent } from './components/home-movies.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule} from "@angular/common/http"
+import { HttpClientModule} from "@angular/common/http";
+import { FilterMoviePipe } from './pipes/filter-movie.pipe'
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     OneMovieComponent,
     MovieDetailComponent,
-    HomeMoviesComponent
+    HomeMoviesComponent,
+    FilterMoviePipe
   ],
   imports: [
     BrowserModule,
