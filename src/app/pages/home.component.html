@@ -10,7 +10,9 @@
       name="filterFilm"
       [(ngModel)]="filterFilm"
     />
+    <div class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
   </div>
+
   <div class="main_movies_container" *ngIf="allMovies.length > 0">
     <app-home-movies
       class="home_movie"

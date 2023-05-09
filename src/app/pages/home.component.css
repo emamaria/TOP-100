@@ -1,6 +1,6 @@
 header{
     height: 400px;
-    background-color: gray;
+    background-color: #F5C518;
 }
 
 .home_movie{
@@ -10,7 +10,6 @@ header{
 .inputContainer{
     display: flex;
     justify-content: center;
-    background-color: purple;
    margin-top: 100px;
    margin-bottom: 50px;
   
@@ -19,8 +18,27 @@ header{
 
 
 input{
-    height: 50px;
+    height: 60px;
     width: 500px;
+    border: 12px solid #F5C518;
+}
+
+input:focus{
+    outline: none;
+}
+
+.search_icon{
+    height: 60px; 
+    width: 50px;
+    background-color:#F5C518;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fa-solid{
+    font-size: 2rem;
+   
 }
 
 
@@ -44,24 +62,24 @@ h4{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+   
     
    
 }
 
 footer{
     display: flex;
-    justify-content: space-between;
-     background-color: aqua;
+    justify-content: flex-end;
+     background-color: #F5C518;
      height: 80px;
      margin-top: auto;
-     
+    
 }
 
 .footer_text_container{
     display: flex;
-    background-color: pink;
     margin: 10px;
     align-items: center;
     margin: 0 40px 0 40px;
+    font-size: 1.3rem;
 }

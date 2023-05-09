@@ -1,7 +1,13 @@
 <article [routerLink]="['/movie', getMovieData.title]">
   <header>
     <div class="movie_rank_container">{{ getMovieData.rank }}</div>
-    <h3>{{ getMovieData.title }}</h3>
+    <h3>
+      {{
+        getMovieData.title.length < 60
+          ? getMovieData.title
+          : getMovieData.title.substring(1, 60) + "..."
+      }}
+    </h3>
   </header>
   <img
     [src]="getMovieData.img"
