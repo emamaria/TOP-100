@@ -8,59 +8,36 @@ import { AllMoviesList } from './interfaces/all-movies.interface';
 export class MoviesService {
 
    allMovies: AllMoviesList[] = [];
-   
-  loadedData: boolean = false;
+
+   homeMovies:HomeMovie[] = [];
   
 
   constructor(private http: HttpClient) { 
 
-    
-    console.log("cargando servicios");
   
-    // this.http.get("http://localhost:4000/movies").subscribe((resp:any) => {
+    this.http.get("http://localhost:4000/movies").subscribe((resp:any) => {
     
-    //   console.log("done request", resp);
-    //    this.allMovies = resp
-    //   console.log("primera carga", this.allMovies);
+      console.log("done request in service", resp);
+       this.allMovies = resp
 
-    // })
+       this.homeMovies = resp.map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )
+    
 
+    })
+
+   }
+
+
+
+  getOneMovieDetail(movieName: string){
+    return [...this.allMovies].filter((movie: AllMoviesList) => movie.title.toLowerCase() === movieName.toLowerCase())[0]
+  }
+
+  getAllHomeMovies(): HomeMovie[]{
    
-
-    
+    return [...this.homeMovies]
   }
 
   
-
-  get moviesList(){
-    return [...this.allMovies]
-  }
-
-  homeMovies(): HomeMovie[]{
-    console.log("ejecuto homeMovies");
-    this.loadedData = true;
-    console.log("loaded status", this.loadedData);
- 
-    return [...this.allMovies].map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )
-  }
-
-  
-  // requestMovies(): any{
-
-  //   if(this.allMovies.length > 0){
-  //     console.log("already has data");
-  //     return this.allMovies;
-  //   }else{
-  //    this.http.get("http://localhost:4000/movies").subscribe((resp:any) => {
-  //     console.log("done request", resp.results);
-  //      this.allMovies = resp.results
-    
-  //   })
-
-  //   return this.allMovies;
-  //   }
-  // }
-
- 
 
 }

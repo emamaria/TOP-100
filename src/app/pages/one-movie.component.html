@@ -1,15 +1,15 @@
-<p>{{ movie.rank }}</p>
-<p>{{ movie.title }}</p>
-<p>{{ movie.rating }}</p>
-<p>{{ movie.year }}</p>
-<p>{{ movie.description }}</p>
+<p>{{ oneMovieDetail.rank }}</p>
+<p>{{ oneMovieDetail.title }}</p>
+<p>{{ oneMovieDetail.rating }}</p>
+<p>{{ oneMovieDetail.year }}</p>
+<p>{{ oneMovieDetail.description }}</p>
 <ul>
-  <li *ngFor="let genre of movie.genre"></li>
+  <li *ngFor="let genre of oneMovieDetail.genre"></li>
 </ul>
 <ul>
-  <li *ngFor="let director of movie.director"></li>
+  <li *ngFor="let director of oneMovieDetail.director"></li>
 </ul>
 <ul>
-  <li *ngFor="let writer of movie.writers"></li>
+  <li *ngFor="let writer of oneMovieDetail.writers"></li>
 </ul>
-<img [src]="movie.image" [alt]="movie.title" />
+<img [src]="oneMovieDetail.image" [alt]="oneMovieDetail.title" />

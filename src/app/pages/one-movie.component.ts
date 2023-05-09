@@ -24,10 +24,9 @@ export class OneMovieComponent implements OnInit {
     })
   }
 
-
-  get movie(){
-    //filtro la pelicula de array por nombre de la ruta
-   return this.moviesService.moviesList.filter((movie: AllMoviesList) => movie.title === this.filmName)[0]
+  get oneMovieDetail(){
+    return this.moviesService.getOneMovieDetail(this.filmName)
   }
+
 
 }
