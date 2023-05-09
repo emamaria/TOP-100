@@ -18,8 +18,8 @@ export class HomeComponent  {
  
 
 
-  getAllMovies(){
-    return this.movieService.getAllHomeMovies()
+  get allMovies(){
+    return this.movieService.homeMovies
   }
 
   

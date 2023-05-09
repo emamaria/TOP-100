@@ -33,11 +33,7 @@ export class MoviesService {
     return [...this.allMovies].filter((movie: AllMoviesList) => movie.title.toLowerCase() === movieName.toLowerCase())[0]
   }
 
-  getAllHomeMovies(): HomeMovie[]{
-   
-    return [...this.homeMovies]
-  }
-
+ 
   
 
 }

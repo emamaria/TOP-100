@@ -3,10 +3,16 @@
 </header>
 
 <main>
-  <div class="main_movies_container" *ngIf="getAllMovies().length > 0">
+  <div class="inputContainer">
+    <input
+      placeholder="See if your interested movie is in the top 100"
+      type="text"
+    />
+  </div>
+  <div class="main_movies_container" *ngIf="allMovies.length > 0">
     <app-home-movies
       class="home_movie"
-      *ngFor="let movie of getAllMovies()"
+      *ngFor="let movie of allMovies"
       [movieData]="movie"
     ></app-home-movies>
   </div>
