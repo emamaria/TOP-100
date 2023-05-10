@@ -2,22 +2,38 @@ h2{
     font-size: 3rem;
     margin-bottom: 50px;
     text-align: center;
-    color: white;
+    color: #F5C518;
    
 }
 
-
+img{
+    border: 5px solid #F5C518 ;
+}
 
 .main_container{
-    background-color: #222831;
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 0 100px 0;
+    padding: 100px;
     font-size: 1.4rem;
     color: white;
 }
+
+.go_back{
+    background-color: #F5C518;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    
+}
+
+.go_back:hover{
+    opacity: 0.7;
+}
+
 
 .about_movie{
     
@@ -57,8 +73,10 @@ img, .movie_info{
 }
 
 .director_title, .writer_title, .plot_title{
-    background-color:#876464;
+    background-color: #F5C518;
     padding: 5px;
+    color: black;
+  
 }
 
 
@@ -115,6 +133,7 @@ img, .movie_info{
 
      .main_container{
         font-size: 1.3rem;
+        padding: 10px;
      }
 
      h2{
