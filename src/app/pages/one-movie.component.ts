@@ -15,6 +15,9 @@ export class OneMovieComponent implements OnInit {
 
   ngOnInit(): void {
 
+    window.scroll(0,10);
+
+
     this.activateRoute.params.subscribe(params => {
 
       const {movieName}  = params;
