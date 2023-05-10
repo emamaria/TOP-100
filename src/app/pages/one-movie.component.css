@@ -2,19 +2,25 @@ h2{
     font-size: 3rem;
     margin-bottom: 50px;
     text-align: center;
+    color: white;
+   
 }
 
+
+
 .main_container{
-    background-color: red;
+    background-color: #222831;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px 0 100px 0;
+    padding: 100px 0 100px 0;
+    font-size: 1.4rem;
+    color: white;
 }
 
 .about_movie{
-    background-color: aqua;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,23 +33,38 @@ img, .movie_info{
 
 .brief_info{
     display: flex;
-    
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
 .brief_info h3{
  margin: 20px;
+ 
 }
 
 .plot{
-    margin: 20px
+    margin: 20px;
+    
 }
+
+.title{
+    font-weight: 100;
+}
+
 
 .director{
     margin: 20px;
 }
 
+.director_title, .writer_title, .plot_title{
+    background-color:#876464;
+    padding: 5px;
+}
+
+
 .director h3{
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 
@@ -56,7 +77,34 @@ img, .movie_info{
 }
 
 
-@media screen and (max-width:900px){
+.rank, .rate, .year, .genre{
+    
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+.rank{
+    background-color: #00aaa0;
+}
+
+.rate{
+    background-color: #5f5dbd;
+   
+}
+
+.year{
+    background-color: #c50d66;
+}
+
+.genre{
+    background-color: #1e549f;
+}
+
+
+
+
+@media screen and (max-width:1000px){
      .about_movie{
         flex-direction: column;
      }
@@ -64,15 +112,28 @@ img, .movie_info{
      .movie_info{
         margin-top: 10px;
      }
+
+     .main_container{
+        font-size: 1.3rem;
+     }
+
+     h2{
+        font-size: 2rem;
+       
+    }
+
+    .rank, .rate, .year, .genre{
+    
+        width: 30%;
+        text-align: center;
+      
+    }
 }
 
 @media screen and (max-width:500px){
-    .brief_info{
-        flex-direction: column;
-    }
-
+   
     img, .movie_info{
-        margin: 0px;
+        margin: 10px 0 0 0;
     }
     
     img{
@@ -82,4 +143,8 @@ img, .movie_info{
     .plot, .director, .writer{
         justify-content: center;
     }
+
+    .main_container{
+        font-size: 1rem;
+     }
 }

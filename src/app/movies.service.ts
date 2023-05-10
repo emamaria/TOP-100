@@ -27,6 +27,12 @@ export class MoviesService {
 
     // })
 
+   
+    
+   
+  
+
+
     
     // this.allMovies = data;
     // this.homeMovies = data.map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )
