@@ -1,0 +1,85 @@
+h2{
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.main_container{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0 100px 0;
+}
+
+.about_movie{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img, .movie_info{
+    margin: 40px;
+}
+
+
+.brief_info{
+    display: flex;
+    
+}
+
+.brief_info h3{
+ margin: 20px;
+}
+
+.plot{
+    margin: 20px
+}
+
+.director{
+    margin: 20px;
+}
+
+.director h3{
+    margin-top: 10px;
+}
+
+
+.writer{
+    margin: 20px;
+}
+
+.writer h3{
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width:900px){
+     .about_movie{
+        flex-direction: column;
+     }
+
+     .movie_info{
+        margin-top: 10px;
+     }
+}
+
+@media screen and (max-width:500px){
+    .brief_info{
+        flex-direction: column;
+    }
+
+    img, .movie_info{
+        margin: 0px;
+    }
+    
+    img{
+        width: 270px;
+    }
+
+    .plot, .director, .writer{
+        justify-content: center;
+    }
+}

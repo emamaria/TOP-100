@@ -1,15 +1,29 @@
-<p>{{ oneMovieDetail.rank }}</p>
-<p>{{ oneMovieDetail.title }}</p>
-<p>{{ oneMovieDetail.rating }}</p>
-<p>{{ oneMovieDetail.year }}</p>
-<p>{{ oneMovieDetail.description }}</p>
-<ul>
-  <li *ngFor="let genre of oneMovieDetail.genre"></li>
-</ul>
-<ul>
-  <li *ngFor="let director of oneMovieDetail.director"></li>
-</ul>
-<ul>
-  <li *ngFor="let writer of oneMovieDetail.writers"></li>
-</ul>
-<img [src]="oneMovieDetail.image" [alt]="oneMovieDetail.title" />
+<main class="main_container">
+  <h2>{{ oneMovieDetail.title }}</h2>
+  <article class="about_movie">
+    <img [src]="oneMovieDetail.image" [alt]="oneMovieDetail.title" />
+    <section class="movie_info">
+      <section class="brief_info">
+        <h3 class="rank">Rank {{ oneMovieDetail.rank }}</h3>
+        <h3 class="rate">Rate {{ oneMovieDetail.rating }}</h3>
+        <h3 class="year">Year {{ oneMovieDetail.year }}</h3>
+        <h3 class="genre" *ngFor="let genre of oneMovieDetail.genre">
+          {{ genre }}
+        </h3>
+      </section>
+      <h3 class="plot">{{ oneMovieDetail.description }}</h3>
+
+      <div class="director">
+        <h3>Director</h3>
+        <h3 *ngFor="let director of oneMovieDetail.director">
+          {{ director }}
+        </h3>
+      </div>
+
+      <div class="writer">
+        <h3>Writer</h3>
+        <h3 *ngFor="let writer of oneMovieDetail.writers">{{ writer }}</h3>
+      </div>
+    </section>
+  </article>
+</main>
