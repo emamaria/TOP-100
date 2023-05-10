@@ -1,6 +1,6 @@
 h1{
     font-size: 3.5rem;
-   
+ text-align: center;
 }
 
 header{
@@ -14,22 +14,12 @@ header{
 
 img{
     width: 300px;
+  
 }
-.header_elements_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: pink; */
-    flex-wrap: wrap;
-    margin: 20px 50px 20px 50px;
-}
-.header_container{
-   
-   display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: aqua; */
-}
+
+
+
+
 
 .home_movie{
     margin: 10px;
@@ -49,6 +39,8 @@ input{
     height: 60px;
     width: 500px;
     border: 12px solid #F5C518;
+    text-align: center;
+   
 }
 
 input:focus{
@@ -110,4 +102,70 @@ footer{
     align-items: center;
     margin: 0 40px 0 40px;
     font-size: 1.3rem;
+    justify-content: center;
+}
+
+
+@media screen and (max-width:900px){
+    h1{
+        font-size: 2rem;
+    }
+
+    .header_container{
+        flex-direction: column;
+    }
+
+
+    img{
+        display: none;
+    }
+    header{
+        height: 200px;
+    }
+
+    input{
+        height: 50px;
+        width: 260px;
+        border: 5px solid #F5C518;
+       font-size: 0.7rem;
+      
+    }
+
+    .search_icon{
+        height: 50px; 
+        width: 40px;
+        background-color:#F5C518;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .fa-solid{
+        font-size: 1rem;
+       
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+
+    .footer_text_container{
+        font-size: 1rem;
+    }
+    
+    .inputContainer{
+        
+       margin-top: 10px;
+       margin-bottom: 60px;
+      
+    }
+
+    main{
+        padding: 30px 0 60px 0;
+       
+        
+    }
 }

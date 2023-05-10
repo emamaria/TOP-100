@@ -27,7 +27,9 @@ export class MoviesService {
 
     // })
 
+
     
+   
   
 
     // this.allMovies = data;

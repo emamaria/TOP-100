@@ -5,6 +5,12 @@ article{
    flex-direction: column;
    width: 300px;
    border: 4px solid #F5C518;
+  margin: 20px;
+}
+
+article:hover{
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 header{
@@ -36,4 +42,10 @@ h3{
     width: 100%;
     text-align: center;
     color: #F5C518;
+}
+
+@media screen and (max-width:900px){
+    article{
+        width: 270px;
+    }
 }
