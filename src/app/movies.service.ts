@@ -17,7 +17,7 @@ export class MoviesService {
   constructor(private http: HttpClient) { 
 
   
-    this.http.get("http://localhost:4000/movies").subscribe((resp:any) => {
+    this.http.get("https://top-100-movies-request.onrender.com/movies").subscribe((resp:any) => {
     
       console.log("done request in service", resp);
        this.allMovies = resp
@@ -28,11 +28,7 @@ export class MoviesService {
     })
 
    
-  
 
-
-    
-   
     // this.allMovies = data;
     // this.homeMovies = data.map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )
 
