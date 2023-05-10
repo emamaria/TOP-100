@@ -3,7 +3,7 @@ h2{
     margin-bottom: 50px;
     text-align: center;
     color: #F5C518;
-   
+   padding-top: 100px;
 }
 
 img{
@@ -28,7 +28,9 @@ img{
     border: none;
     border-radius: 20px;
     color: black;
-    
+    font-size: 1.1rem;
+    margin: 15px 0 25px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .go_back:hover{

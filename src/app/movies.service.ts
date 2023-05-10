@@ -17,17 +17,20 @@ export class MoviesService {
   constructor(private http: HttpClient) { 
 
   
-    // this.http.get("http://localhost:4000/movies").subscribe((resp:any) => {
+    this.http.get("http://localhost:4000/movies").subscribe((resp:any) => {
     
-    //   console.log("done request in service", resp);
-    //    this.allMovies = resp
+      console.log("done request in service", resp);
+       this.allMovies = resp
 
-    //    this.homeMovies = resp.map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )
+       this.homeMovies = resp.map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )
     
 
-    // })
+    })
+
+  
 
 
+    
    
     // this.allMovies = data;
     // this.homeMovies = data.map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )

@@ -14,10 +14,13 @@
     />
     <div class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
   </div>
+  <div class="loading" *ngIf="allMovies.length == 0">
+    <i class="fa-solid fa-spinner fa-spin"></i>
+  </div>
 
   <div class="main_movies_container" *ngIf="allMovies.length > 0">
     <app-home-movies
-      class="home_movie"
+      class="home_movie animate__fadeIn"
       *ngFor="let movie of allMovies | filterMovie : filterFilm"
       [movieData]="movie"
     ></app-home-movies>

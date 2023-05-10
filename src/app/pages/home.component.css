@@ -1,6 +1,7 @@
 h1{
-    font-size: 3.5rem;
+    font-size: 4rem;
  text-align: center;
+ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 header{
@@ -103,8 +104,25 @@ footer{
     margin: 0 40px 0 40px;
     font-size: 1.3rem;
     justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.loading{
+    color: #F5C518;
+    text-align: center;
+    /* animation: mymove 0.9s infinite; */
+   
+}
+
+
+/* @keyframes mymove {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+  } */
 
 @media screen and (max-width:900px){
     h1{
