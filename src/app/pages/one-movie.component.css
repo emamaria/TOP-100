@@ -7,7 +7,8 @@ h2{
 }
 
 img{
-    border: 5px solid #F5C518 ;
+    border: 5px solid #F5C518;
+   
 }
 
 .main_container{
@@ -38,7 +39,7 @@ img{
 .about_movie{
     
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -47,10 +48,13 @@ img, .movie_info{
 }
 
 
+
+
 .brief_info{
     display: flex;
    flex-wrap: wrap;
    justify-content: center;
+  
 }
 
 .brief_info h3{
@@ -122,7 +126,7 @@ img, .movie_info{
 
 
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1300px){
      .about_movie{
         flex-direction: column;
      }
@@ -146,6 +150,10 @@ img, .movie_info{
         width: 30%;
         text-align: center;
       
+    }
+
+    .about_movie{
+        align-items: center;
     }
 }
 
