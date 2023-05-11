@@ -16,19 +16,20 @@ export class MoviesService {
 
   constructor(private http: HttpClient) { 
 
+    //comment request passed the request limit
   
-    this.http.get("https://top-100-movies-request.onrender.com/movies").subscribe((resp:any) => {
+    // this.http.get("https://top-100-movies-request.onrender.com/movies").subscribe((resp:any) => {
     
-      console.log("done request in service", resp);
-       this.allMovies = resp
+    //   console.log("done request in service", resp);
+    //    this.allMovies = resp
 
-       this.homeMovies = resp.map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )
+    //    this.homeMovies = resp.map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )
     
 
-    })
+    // })
 
    
-
+    //para pruebas con datos en duro
     // this.allMovies = data;
     // this.homeMovies = data.map((movie:AllMoviesList) => ({title: movie.title, img: movie.image, rank: movie.rank} ) )
 
