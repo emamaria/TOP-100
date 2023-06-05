@@ -28,7 +28,10 @@ export class HomeComponent  {
     return new Date().getFullYear()
  }
   
-
+ 
+get message(){
+  return this.movieService.message;
+}
 
  
 
