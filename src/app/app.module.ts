@@ -9,6 +9,7 @@ import { HomeMoviesComponent } from './components/home-movies.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule} from "@angular/common/http";
 import { FilterMoviePipe } from './pipes/filter-movie.pipe'
+
 @NgModule({
   declarations: [
     AppComponent,
