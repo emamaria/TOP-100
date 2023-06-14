@@ -18,9 +18,9 @@ export class MoviesService {
   constructor(private http: HttpClient) { 
 
     //comment request passed the request limit
-   
   
-    this.http.get("https://top-imdb.onrender.com/movies").subscribe((resp:any) => {
+  
+    this.http.get("https://top-100-v.vercel.app/movies").subscribe((resp:any) => {
    
     console.log(resp, "respuesta");
       console.log("done request in service", resp);
