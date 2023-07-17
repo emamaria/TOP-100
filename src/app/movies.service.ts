@@ -20,7 +20,7 @@ export class MoviesService {
     //comment request passed the request limit
   
   
-    this.http.get("https://top-100-v.vercel.app/movies").subscribe((resp:any) => {
+    this.http.get("").subscribe((resp:any) => {
    
     console.log(resp, "respuesta");
       console.log("done request in service", resp);
